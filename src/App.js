@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import BgImage from "./background.jpg";
+const App = () =>{
+    return (
+        <div className= "App">
+            <div className="ImagePreview">
+                <div style={{backgroundImage : `url(${BgImage})`}} />
+            </div>
+            <div className= "DropArea">
+            <div className="ImageProgress">
+                    <div className="ImageProgressImage" style={{ backgroundImage: `url(${BgImage})` }}></div>
+                    <div className="ImageProgressUploaded" style={{ backgroundImage: `url(${BgImage})` }}></div>
+                </div> 
+                <div className="Status">Drag & Drop here!</div>
+            </div>
+        </div>
+    );
+};
 
 export default App;
